@@ -28,7 +28,8 @@ export function createTracerProvider(
   workflowRunJobs: WorkflowRunJobs
 ) {
   const serviceName =
-    otelServiceName || workflowRunJobs.workflowRun.name ||
+    otelServiceName ||
+    workflowRunJobs.workflowRun.name ||
     `${workflowRunJobs.workflowRun.workflow_id}`;
   const serviceInstanceId = [
     workflowRunJobs.workflowRun.repository.full_name,

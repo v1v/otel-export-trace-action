@@ -14,7 +14,7 @@ inputs:
     description: Network Headers for the destination endpoint to export OpenTelemetry traces to
     required: true
   otelServiceName:
-    description: Sets a value for the otel service name of the trace.
+    description: OpenTelemetry service name
     required: false
     default: ""
   githubToken:

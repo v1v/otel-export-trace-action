@@ -32,6 +32,7 @@ describe("createTracerProvider", () => {
       subject = createTracerProvider(
         "localhost",
         "test=foo",
+        "",
         mockWorkflowRunJobs
       );
       expect(
@@ -44,6 +45,7 @@ describe("createTracerProvider", () => {
       subject = createTracerProvider(
         "localhost",
         "test=foo",
+        "",
         mockWorkflowRunJobs
       );
       expect(
@@ -55,6 +57,7 @@ describe("createTracerProvider", () => {
       subject = createTracerProvider(
         "localhost",
         "test=foo",
+        "",
         mockWorkflowRunJobs
       );
       expect(
@@ -75,6 +78,7 @@ describe("createTracerProvider", () => {
       subject = createTracerProvider(
         "localhost",
         "test=foo",
+        "",
         mockWorkflowRunJobs
       );
       expect(
@@ -89,6 +93,7 @@ describe("createTracerProvider", () => {
     subject = createTracerProvider(
       "localhost",
       "test=foo",
+      "",
       mockWorkflowRunJobs
     );
     const spanProcessor = subject.getActiveSpanProcessor();
