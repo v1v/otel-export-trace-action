@@ -24,10 +24,11 @@ function stringToHeader(value: string): StringDict {
 export function createTracerProvider(
   otlpEndpoint: string,
   otlpHeaders: string,
+  otelServiceName: string,
   workflowRunJobs: WorkflowRunJobs
 ) {
   const serviceName =
-    workflowRunJobs.workflowRun.name ||
+    otelServiceName || workflowRunJobs.workflowRun.name ||
     `${workflowRunJobs.workflowRun.workflow_id}`;
   const serviceInstanceId = [
     workflowRunJobs.workflowRun.repository.full_name,
